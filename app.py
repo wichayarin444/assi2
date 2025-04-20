@@ -28,7 +28,7 @@ if upload_file is not None:
     st.image(img, caption = "Upload Image")
     
     #preprocess
-    img = img.resize(224,224)
+    img = img.resize((224,224))
     x = image.img_to_array(img)
     x = np.expand_dims(x,axis=0)
     x = preprocess_input(x)
